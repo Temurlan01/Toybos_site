@@ -7,9 +7,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', HomeView.as_view(), name='home-url'),
     path('products/', ProductListView.as_view(), name='products-url'),
-    path('products/1/', ProductDetailView.as_view(), name='product-detail-url'),
+    path('products/<int:pk>/', ProductDetailView.as_view(), name='product-detail-url'),
     path('publications/', PublicationListView.as_view(), name='publications-url'),
-    path('publications/1/', PublicationDetailView.as_view(), name='publication-detail-url'),
+    path('publications/<int:pk>/', PublicationDetailView.as_view(), name='publication-detail-url'),
     path('recipes/', RecipesListView.as_view(), name='recipes-url'),
     path('recipes/1/', RecipesDetailView.as_view(), name='recipes-detail-url'),
     ]

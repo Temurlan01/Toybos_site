@@ -18,27 +18,29 @@
         </div>
       </div>
     </section>
+
     <section class="parallax" style="background: url({% static 'img/jpg/slider-background.jpg' %})">
       <div class="paralax-img"><img src="{% static 'img/png/img9.png' %}"/></div>
       <div class="paralax-img2"><img src="{% static 'img/png/img10.png' %}"/></div>
       <div class="parallax-heading">
-        <h2>полукапченые колбасы</h2>
+        <h2>{{Category.name}}</h2>
       </div>
     </section>
+
     <section class="product__inner">
       <div class="container">
         <div class="product-right">
           <div class="product__inner-content">
-            <div class="product__inner-img"><img src="img/png/img12.png"/></div>
+            <div class="product__inner-img"><img src="{{ product.image.url }}"/></div>
             <div class="productinner-heading-all">
               <div class="product__inner-heading">
-                <h2>  Фирменная</h2>
-                <h3> Колбаса полукапченая</h3>
-                <p>  Миссия компании заключается в том, чтобы прикладывать все силы для улучшения качества жизни наших потребителей.</p>
+                <h2>  {{ product.name }}</h2>
+                <h3> {{ Category.name }}</h3>
+                <p>  {{product.description}}</p>
               </div>
               <div class="product__inner-heading">
                 <h2>  Состав</h2>
-                <p>  Миссия компании заключается в том, чтобы прикладывать все силы для улучшения качества жизни наших потребителей.</p>
+                <p>  {{product.compounds}}</p>
               </div>
               <div class="product__inner-heading">
                 <h2>Рецепты</h2>

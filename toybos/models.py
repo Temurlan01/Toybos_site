@@ -13,8 +13,7 @@ class Product(models.Model):
     description = models.TextField()
     image = models.ImageField()
     compounds = models.TextField()
-    recipe = models.TextField()
-    Category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products', verbose_name='Категория')
+    Category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products', verbose_name='products')
 
 
 class Publications(models.Model):
